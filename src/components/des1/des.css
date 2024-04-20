@@ -1,0 +1,79 @@
+.Des-body{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Des-section{
+    width: 65vw;
+    max-width: 600px;
+    min-width: 250px;
+    height: 10rem;
+    background-color: rgba(196, 196, 196, 0.311);
+    border-radius: 15px;
+    border-top-left-radius:30px;
+    border-bottom-right-radius: 30px;
+    margin: 35px;
+    padding: 5px;
+    box-shadow: 0px 0px 10px 4px white;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.Des-section-right{
+    background-color: rgba(0, 0, 0, 0.732);
+    color: white;
+    
+}
+
+.Des-section-span{
+    position:absolute;
+    top: 40px ;
+    left: -35px;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 0px 10px 1px rgba(255, 255, 255, 0.545);
+}
+
+.Des-right-section{
+    position:absolute;
+    top: 40px ;
+    right: -35px;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    box-shadow: 10px 0px 10px 1px rgba(255, 255, 255, 0.545);
+}
+
+.Des-section span img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; 
+    border: 1.5px solid rgb(0, 0, 0);
+}
+
+.Des-text-Body{
+    text-align: left;
+    margin-left: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 100%;
+    overflow-x:scroll;
+}
+
+.Des-text-right-Body{
+    text-align: left;
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 20px;
+    height: 100%;
+    overflow-x:scroll;
+}
