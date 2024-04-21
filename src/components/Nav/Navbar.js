@@ -10,6 +10,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import { RiHomeGearFill } from "react-icons/ri";
 import { GiPriceTag } from "react-icons/gi";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
+import { FaRegCommentDots } from "react-icons/fa6";
 
 function NavScrollExample() {
   return (
@@ -27,6 +28,9 @@ function NavScrollExample() {
             <Nav.Link className='text-light' href="#action2">gheymat <GiPriceTag /></Nav.Link>
             <Nav.Link className='text-light' href="#">
                 product <MdOutlineProductionQuantityLimits />
+            </Nav.Link>
+            <Nav.Link className='text-light' href="#">
+                feedback <FaRegCommentDots />
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>

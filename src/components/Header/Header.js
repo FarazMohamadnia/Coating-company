@@ -16,14 +16,15 @@ import 'swiper/css/navigation';
 
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
-
+// import images
+import img from '../../asset/delete/pixlr-image-generator-66b1a575-c32a-4ab7-8257-06a0fa1899fd.png'
 
 export default function Header(){
     const[TextColor , setTextColor]=useState('black')
     return(
         <>
             <div className='header-section d-md-flex justify-center align-center'>
-            <div className='shadow-color d-md-flex w-100 h-100 justify-content-center align-items-center'>
+            <div className='d-md-flex w-100 h-100 justify-content-center align-items-center'>
                 <Col md={6}>
                 <div className='header-title  d-flex flex-column align-items-start'>
                     <div
@@ -69,14 +70,14 @@ export default function Header(){
                   className="swiper-personaliti-sectiopn"
                 >
                   <SwiperSlide>
-                    <img src=''/>
-                    <h3>shayan</h3>
+                    <img src={img}/>
+                    <h3 className='font-style fw-bold'>shayan</h3>
                     <p> kefhrjkefjf akfkjrbf sefkjrf</p>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <img src=''/>
-                    <h3>hamid</h3>
-                    <p> kefhrjkefjf akfkjrbf sefkjrf</p>
+                    <img src={img}/>
+                    <h3 className='font-style fw-bold'>hamid</h3>
+                    <p> kefhrjkefjf akfkjrbf sefkjrf kdfhkshfkdf kjhdfkjdhfkdfkj dfdsjfhksdfhkdsf dfhdksfhskf</p>
                   </SwiperSlide>
                 </Swiper>
                 </Col>

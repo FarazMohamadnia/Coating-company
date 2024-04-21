@@ -1,0 +1,11 @@
+.tabs-size{
+    height: 42rem;
+    color: white;
+}
+
+.nav{
+    --bs-nav-link-hover-color:white
+}
+.nav-link{
+    color: red;
+}

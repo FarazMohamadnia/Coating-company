@@ -80,9 +80,7 @@ function Homepage(){
                 </Marquee>
             </div>
             <div>
-            <Container>
                 <ControlledTabs />
-            </Container>
             </div>
         </>
     )

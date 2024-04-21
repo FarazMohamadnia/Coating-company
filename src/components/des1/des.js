@@ -5,7 +5,7 @@ export default function Des(){
     return(
         <>
             <div className='Des-body'>
-            <h2 className='m-auto'>mavared estefade</h2>
+            <h2 className='m-auto mt-3 border-bottom text-light fw-bold font-style'>mavared estefade</h2>
             <Container>
                 <div className='Des-section' >
                     <span className='Des-section-span'><img src={img1} /></span>
