@@ -11,6 +11,9 @@ import { RiHomeGearFill } from "react-icons/ri";
 import { GiPriceTag } from "react-icons/gi";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
 import { FaRegCommentDots } from "react-icons/fa6";
+import { IoMdColorPalette } from "react-icons/io";
+import { Link } from 'react-router-dom';
+
 
 function NavScrollExample() {
   return (
@@ -24,14 +27,15 @@ function NavScrollExample() {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link className='text-light' href="#action1">Home <RiHomeGearFill /></Nav.Link>
-            <Nav.Link className='text-light' href="#action2">gheymat <GiPriceTag /></Nav.Link>
-            <Nav.Link className='text-light' href="#">
-                product <MdOutlineProductionQuantityLimits />
-            </Nav.Link>
-            <Nav.Link className='text-light' href="#">
-                feedback <FaRegCommentDots />
-            </Nav.Link>
+            <Link className='text-light' to={'/'}>Home <RiHomeGearFill /></Link>
+            <Link className='text-light' to={'/getQuote'}>Get a Quote <GiPriceTag /></Link>
+            <Link className='text-light' to={'/Color'}>Colors <IoMdColorPalette /></Link>
+            <Link className='text-light' to={'/feedback'}>
+                Feedback <FaRegCommentDots />
+            </Link>
+            <Link className='text-light' >
+              Product <MdOutlineProductionQuantityLimits />
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -1,0 +1,43 @@
+.footer-container{
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+.footer-container a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+}
+
+
+.Footer-description{
+    background: linear-gradient(to right , black , gray , silver);
+    animation: AnimateBG 15s ease infinite;
+    background-size: 400% 400%;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 11px;
+    padding: 5px;
+    text-align: center;
+}   
+
+
+
+@keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}

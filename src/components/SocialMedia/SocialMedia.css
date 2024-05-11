@@ -1,0 +1,31 @@
+.SocialMedia-body{
+    background: linear-gradient(to right , rgb(225 , 48, 108),rgba(0, 0, 0, 0.649),rgba(0, 128, 0, 0.652),rgba(0, 0, 255, 0.599),rgba(255, 0, 0, 0.65));
+    animation: AnimateBG 10s ease infinite;
+    background-size: 500% 500%;
+}
+
+.SocialMedia-body h2{
+    text-shadow: 1px 1px 6px white;
+}
+.SocialMedia-style{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+    text-align: center;
+}
+.SocialMedia-style p{
+    font-size: 11px;
+}
+
+@keyframes AnimateBG {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+}

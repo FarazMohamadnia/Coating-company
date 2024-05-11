@@ -4,6 +4,12 @@
     animation: AnimateBG 7s ease infinite;
     box-shadow: 0px 0px 10px 6px white;
 }
+
+.bg-body-nav a{
+  text-decoration: none;
+  margin-right: 20px;
+  padding: 9px;
+}
 .Nav-style img{
   background-color: rgba(255, 255, 255, 0.499);
     /* height: 90%; */

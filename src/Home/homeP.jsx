@@ -1,4 +1,6 @@
-import { useRef, useState } from 'react';
+import getData from '../test/test.js'
+
+import { useEffect, useRef, useState } from 'react';
 import Header from '../components/Header/Header';
 import Header2 from '../components/Header2/Header2';
 import Navbar from '../components/Nav/Navbar';
@@ -14,12 +16,16 @@ import Pcolor from '../components/Pcolor/Pcolor';
 import Marquee from "react-fast-marquee";
 import { DataColor1 ,DataColor2, DataColor3} from '../components/Pcolor/colorData';
 import ControlledTabs from '../components/Tabs/Tabs';
-import Container from 'react-bootstrap/esm/Container';
+import Socialmedia from '../components/SocialMedia/SocialMedia';
+import Pcolor2 from '../components/Pcolor2/Pcolor2';
+import Loading from '../components/Loading/loading.js';
+import Footer from '../components/Footer/footer.js';
 
 
 
 function Homepage(){
     const [scrollX, setscrollX] = useState(0)
+    const [loading , setloading]=useState(true)
     let scrl = useRef();
     const slide = (shift) => {
         scrl.current.scrollLeft += shift;
@@ -31,11 +37,16 @@ function Homepage(){
     const ColorData1 = DataColor1;
     const ColorData2 = DataColor2;
     const ColorData3 = DataColor3;
-
-
-
+    
+    useEffect(()=>{
+        setTimeout(() => {
+            setloading(false)
+        }, 5 * 1000);
+    },[])
     return(
         <>
+        {loading ? <Loading /> :
+        <div>  
             <div>
                 <Navbar/>
             </div>
@@ -52,6 +63,12 @@ function Homepage(){
             </div>
             <div>
                 <Des/>
+            </div>
+            <div className='Pcolor2-style'>
+                <h1 className='font-style fw-bold text-center text-light'>Powder coting Color</h1>
+                <div className='Pcolor2-card-body'>
+                    <Pcolor2 /> <Pcolor2 />  <Pcolor2 />  <Pcolor2 />  <Pcolor2 />  <Pcolor2 /> <Pcolor2 />  <Pcolor2 />
+                </div>
             </div>
             <div>
                 <Marquee>
@@ -82,6 +99,12 @@ function Homepage(){
             <div>
                 <ControlledTabs />
             </div>
+            <div>
+                <Socialmedia/>
+            </div>
+            <Footer />
+        </div>
+        }
         </>
     )
 }

@@ -1,0 +1,107 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-controller{
+    height: 100%;
+    min-height: 40rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media only screen and (max-width: 500px) {
+        max-height: 100rem; 
+        min-height: 45rem;
+    } 
+
+}
+
+.formbody{
+    width: 80%;
+    min-width: 270px;
+    max-width: 850px;
+    color: white;
+    background-color: rgba(137, 137, 137, 0.604);
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(255, 0, 0);
+    box-shadow: 0px 0px 10px 10px rgba(255, 0, 0, 0.8);
+}
+
+.input-name{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.input-value-name{
+    -moz-appearance:textfield; /* Firefox */
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.552);
+    border-radius: 3px;
+    @media only screen and (max-width: 500px) {
+        width: 90%;
+    } 
+}
+
+.textarea-for-jobDes{
+    background-color: rgba(255, 255, 255, 0.552);
+    width: 90%;
+    max-height: 5rem;
+    border-radius: 3px;
+    padding: 4px;
+}
+.send-Production{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.send-Production-sapn{
+    font-size: 11px;
+}
+
+.send-Production-list{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.send-Production-list input {
+    width: 15rem ;
+    @media only screen and (max-width: 500px) {
+        width: 230px;
+    } 
+}
+
+.view-Image{
+    min-width:100px ;
+    max-width: 200px;
+    max-height: 180px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.view-Image img{
+    width: 100%;
+    height: 100%;
+    max-height: 180px;
+    border-radius: 10px;
+}
+
+.button-controller{
+    display: flex;
+    justify-content: center;
+}
+
+.Send-Loading-button{
+    width: 90%;
+    max-width: 300px;
+}

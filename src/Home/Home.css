@@ -28,3 +28,18 @@
     transition: 0.5s;
     transform: scale(1.18);    
 }
+
+.Pcolor2-style{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    box-shadow: 0px 0px 10px 10px ;
+    overflow: scroll;
+}
+
+.Pcolor2-card-body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
