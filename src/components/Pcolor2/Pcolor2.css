@@ -1,7 +1,18 @@
+.card-color-body-section-2{
+    overflow-y: scroll;
+    width: 15rem;
+    height: 220px;
+    background-color: rgba(0, 0, 0, 0.799);
+    color: white;
+    margin: 10px;
+    position: relative;
+    text-align: left;
+    border-radius: 19px;
+}
 .card-image{
-    border-radius: 22px;
+    border-radius: 20px 20px 0px 0px;
     width: 100%;
-    max-height: 60%;
+    height: 180px;
 }
 .color-code-span{
     position: absolute;
@@ -9,7 +20,7 @@
     width: 100%;
     background-color: rgba(197, 197, 197, 0.668);
     text-align: center;
-    border-radius: 70px 70px 3px 3px;
+    border-radius: 1px 1px 3px 3px;
     color: black;
     box-shadow: 0px 0px 7px 1px white;
 }

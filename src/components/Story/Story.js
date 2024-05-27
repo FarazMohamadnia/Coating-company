@@ -1,10 +1,13 @@
 import './Story.css'
-import img from '../../asset/delete/pixlr-image-generator-66b1a575-c32a-4ab7-8257-06a0fa1899fd.png'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import { useRef, useState } from 'react'
+// animation
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
-
-export default function AdvertisingStory({img1 , img2}){
+export default function AdvertisingStory({image1 , image2}){
     const closebtn = useRef()
     const BorderAnimationStop = useRef()
     let time = 0
@@ -16,7 +19,6 @@ export default function AdvertisingStory({img1 , img2}){
         //Error handling => Prevent reruns
         if(!closebtn.current.className.includes('d-none')){
             closebtn.current.classList.add('d-none')
-            console.log('ssss')
         } 
         setactiveStory(false)
         clearInterval(setTime)
@@ -47,15 +49,15 @@ export default function AdvertisingStory({img1 , img2}){
     return(
         <>
         
-            <div>
-                <img src={img} ref={BorderAnimationStop} className='Advertising-storys-img border-animation' onClick={openBtnHandler}/>   
+            <div data-aos="zoom-in">
+                <img src={image1} ref={BorderAnimationStop} className='Advertising-storys-img border-animation' onClick={openBtnHandler}/>   
             </div>
             <div ref={closebtn} className='Show-Advertising-storys d-none'>
                 <span className='Show-Time-Story' style={{width:`${storyTime}%`}}></span>
                 <span onClick={closeBtnHandler} className='Show-Advertising-story-span'>
                     <AiFillCloseCircle size={'50px'} color={'white'}/>
                 </span>
-                <img src={img}/>
+                <img src={image2}/>
             </div>
         </>
     )

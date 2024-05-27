@@ -1,0 +1,18 @@
+.Dashboard-container{
+    min-height: 100vh;
+}
+
+.image-stroy-section-style{
+    max-width: 350px;
+    min-width: 250px;
+    width: 60vw;
+    max-height: 350px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.Story-section-style{
+    border-top: 2px solid black;
+    padding: 20px;
+    margin-top: 15px;
+}

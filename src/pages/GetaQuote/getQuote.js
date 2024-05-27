@@ -10,12 +10,19 @@ import {styled} from '@mui/material/styles';
 
 import { useState } from 'react';
 // post Api
-import { PostQuote } from '../../config/test/apiTest';
+import { PostQuote } from '../../config/api/apis';
 //axios Lib
 import axios from 'axios';
 // sweet alert Lib
 import Swal from 'sweetalert2'
-function GetQuote() {
+// firebase import
+import { imgDB } from '../../config/Firebase/firebaseConfig';
+import { getDownloadURL , ref, uploadBytes } from 'firebase/storage';
+import { v4 } from 'uuid';
+import Footer from '../../components/Footer/footer';
+
+
+function GetQuote(){
     // upload file config
     const VisuallyHiddenInput = styled('input')({
         clip: 'rect(0 0 0 0)',
@@ -47,6 +54,8 @@ function GetQuote() {
             photo : '' 
         }]
     });
+    const [disabledBTN , setdisabledBTN]=useState(false);
+
     const dropDownListFunction = (e)=>{
         const value = !e.target.checked;
         setdropDownList(value);
@@ -56,21 +65,32 @@ function GetQuote() {
         const value = e.target.files[0];
         const objectUrl = URL.createObjectURL(value);
         setImage(objectUrl)
-        setData({
-            ...Data , details:[{
-                ...Data.details[0] ,
-                photo : objectUrl
-            }]
-        })
-        console.log(Data);
+        if(value){
+            setLoading(true)
+            const imgref = ref(imgDB , `nucoatingImg/${v4()}`);
+            uploadBytes(imgref , value).then(val =>{
+                getDownloadURL(val.ref).then(url =>{
+                    const photo = url
+                    setData({
+                        ...Data , details:[{
+                            ...Data.details[0] ,
+                            photo : photo
+                        }]
+                    })
+                    setdisabledBTN(true);
+                    setLoading(false)
+                    console.log(Data);
+                })
+            })
+        }
     }
 
     const DataHandller = (e)=>{
         const value = e.target.value
         const names = e.target.name
-        console.log(value +'++++++', names);
             setData({
-                ...Data  , [names] : value 
+                ...Data , 
+                [names] : value 
             })
         console.log(Data)
     }
@@ -84,7 +104,6 @@ function GetQuote() {
                     [names]:value
                 }]
             })
-        console.log(Data)
     }
 
     const SendData =async()=>{
@@ -119,7 +138,7 @@ function GetQuote() {
         <NavScrollExample />
         <div className='form-controller'>
             <div className='formbody'>
-                <h2 className='text-center font-style fw-bold'>Get a Quote</h2>
+                <h2 className='text-center font-style fw-bold'>Request a Quote</h2>
                 <div className='input-name'>
                     <TextField 
                         required onChange={DataHandller} color="error" name='firstName' className='input-value-name mt-3' id="filled-basic" label="First Name" variant="filled" />
@@ -184,14 +203,15 @@ function GetQuote() {
                           tabIndex={-1}
                           startIcon={<CloudUploadIcon />}
                           color='error'
+                          disabled={disabledBTN}
                         >
                           Upload file
                           <VisuallyHiddenInput onChange={imageHandller} type="file" />
                         </Button>
                         {Image &&
                             <div className='view-Image'>
-                            <img src={Image}/>
-                        </div>
+                                <img src={Image}/>
+                            </div>
                         }
                     </div>
                 </div>
@@ -210,6 +230,7 @@ function GetQuote() {
                 </div>
             </div>
         </div>
+        <Footer />
     </>
   );
 }

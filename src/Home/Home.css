@@ -5,6 +5,8 @@
     height: 8rem;
     background-color: rgb(28, 28, 28);
     overflow-x: scroll;
+    overflow-y: hidden;
+    padding-top: 19px;
     display: flex;
     align-items: center;
     scroll-behavior: smooth;
@@ -15,6 +17,7 @@
     cursor: pointer;
     color: white;
     transition: 0.5s;
+    z-index: 1;
 }
 .icon-right{
     position:sticky;
@@ -31,15 +34,24 @@
 
 .Pcolor2-style{
     width: 100vw;
-    height: 100vh;
     margin-top: 15px;
     margin-bottom: 35px;
     box-shadow: 0px 0px 10px 10px ;
-    overflow: scroll;
 }
 
-.Pcolor2-card-body{
+.pcolor2-body-styles{
+    height: 240px;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    background-color: rgba(211, 211, 211, 0.65);
+    overflow-x: scroll;
+    margin-top: 30px;
+    padding-left: 70px;
+    position: relative;
+}
+
+.pcolor2-body-styles-span{
+    position: absolute;
+    left: 10px;
+    top: 100px;
 }

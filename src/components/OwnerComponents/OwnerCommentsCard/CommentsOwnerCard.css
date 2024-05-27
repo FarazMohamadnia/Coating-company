@@ -1,0 +1,32 @@
+.comments-data-container{
+    background-color: rgba(255, 255, 255, 0.906);
+    min-width: 250px;
+    max-width: 400px;
+    width: 70%;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.commnet-form-for-owner{
+    position:fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    z-index: 3;
+}
+
+.comments-form-body-for-Owner{
+    width: 85vw;
+    max-width: 500px;
+    min-width: 250px;
+    height: 65vh;
+    background-color: white;
+}
+
+.overflow-for-commnets-replies{
+    max-height: 300px;
+    overflow: scroll;
+}

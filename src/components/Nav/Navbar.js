@@ -14,12 +14,15 @@ import { FaRegCommentDots } from "react-icons/fa6";
 import { IoMdColorPalette } from "react-icons/io";
 import { Link } from 'react-router-dom';
 
+// import logo image
+import img from '../../asset/Logo/nucoatingLogo.jpg'
+
 
 function NavScrollExample() {
   return (
     <Navbar  expand="md" className="bg-body-nav">
       <Container fluid>
-        <Navbar.Brand href="#">LOGO</Navbar.Brand>
+        <Navbar.Brand href="#"><img className='favicon-images-style' src={img}/></Navbar.Brand>
         <Navbar.Toggle style={{backgroundColor:'rgba(255, 255, 255, 0.699)'}} aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

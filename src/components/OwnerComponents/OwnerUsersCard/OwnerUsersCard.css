@@ -1,0 +1,23 @@
+.users-card-owner-container{
+    min-width: 200px;
+    width: 50%;
+    max-width: 300px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 15px;
+}
+
+.users-image-sending{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.656);
+    position:fixed;
+    top: 0px;
+}
+
+.users-image-sending img{
+    max-width: 85vw;
+    max-height: 90vh;
+
+}

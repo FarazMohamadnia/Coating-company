@@ -5,7 +5,10 @@
     margin: 0px 20px;
     border: 3px solid rgba(255, 255, 255, 0.25);
     transition: 1s;
-    
+    @media (max-width: 550px) {
+        width: 90px;
+        height: 90px;
+    }
 }
 .border-animation{
     border: 3px solid rgb(255, 255, 255);

@@ -1,0 +1,23 @@
+.Owner-Color-Page-Form-Container{
+    width: 90%;
+    max-width: 700px;
+    min-width: 280px;
+    background-color: rgba(247, 247, 247, 0.502);
+    margin: auto;
+}
+
+.textarea-Color-form{
+    background-color: rgba(255, 255, 255, 0.353);
+    padding: 4px;
+    max-width: 500px;
+    min-width:250px;
+    max-height: 80px;
+}
+
+.upload-image-ColorCard{
+    max-width: 350px;
+    min-width: 250px;
+    width: 70%;
+    border: 1px solid white ;
+    border-radius: 12px;
+}

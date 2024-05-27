@@ -4,10 +4,15 @@ import { FaCircleQuestion } from "react-icons/fa6";
 // date-fns Lib
 import { differenceInDays, parseISO } from 'date-fns';
 import { useEffect, useState } from 'react';
-import { ConstructionOutlined } from '@mui/icons-material';
 
+//animation
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function FeedbackCard({title , text , createdAt , replies }){
+    //animation config
+    AOS.init()
+
     const [daysPassed, setDaysPassed] = useState(0);
     const [rpDate , setrpDate] = useState([]);
     const [Existence , setExistence] =useState(true)
@@ -21,7 +26,12 @@ export default function FeedbackCard({title , text , createdAt , replies }){
                 rpDate.push({rpcreatedAt : setTime , rptext : element.rptext, rptitle : element.rptitle , _id : element._id});
                 let parsedCommentDate =parseISO(element.rpcreatedAt);
                 let days = differenceInDays(currentDate , parsedCommentDate);
-                element.rpcreatedAt = `${days}`   
+                element.rpcreatedAt = `${days} days ago`
+                if(days == 0){
+                    element.rpcreatedAt = 'Today'
+                }else if(days == 1){
+                    element.rpcreatedAt = 'yesterday'
+                }   
             });
         }
         console.log(rpDate)   
@@ -42,7 +52,7 @@ export default function FeedbackCard({title , text , createdAt , replies }){
         }else if(days == 1){
             days = 'yesterday'
         }else{
-            days = days+'days ago'
+            days = days + 'days ago'
         }   
         setDaysPassed(days);
     }
@@ -54,7 +64,7 @@ export default function FeedbackCard({title , text , createdAt , replies }){
 
 
     return(
-        <div className="card">
+        <div className="card" data-aos="flip-left">
           <div className="content">
             <div>
                 <span className='feedback-icon'><FaCircleQuestion size={'2rem'} /></span>
@@ -72,7 +82,7 @@ export default function FeedbackCard({title , text , createdAt , replies }){
                             {data.rptext}
                         </p>
                         <span className='owner-date-card-section font-style'>
-                        {data.rpcreatedAt}days ago
+                        {data.rpcreatedAt}
                         </span>
                     </div>
                 )

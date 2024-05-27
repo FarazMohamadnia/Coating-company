@@ -14,13 +14,14 @@ import Form from 'react-bootstrap/Form';
 
 import { BsFillXCircleFill } from "react-icons/bs";
 import axios from "axios";
-import { getComments } from "../../config/test/apiTest";
+import { getComments } from "../../config/api/apis";
 import Swal from "sweetalert2";
 
 import { VscCommentDiscussion } from "react-icons/vsc";
 import { MdError } from "react-icons/md";
 import { IoIosWarning } from "react-icons/io";
 import Loading from "../../components/Loading/loading";
+import Footer from "../../components/Footer/footer";
 
 
 export default function Feedback(){
@@ -152,6 +153,7 @@ export default function Feedback(){
                     </div>
                 </div>
             }
+            <Footer />
         </div>
     )
 }

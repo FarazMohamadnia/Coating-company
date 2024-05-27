@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { SendEmail , sendOwnerData} from '../../config/test/apiTest';
+import { SendEmail , sendOwnerData} from '../../config/api/apis';
 import './ownerLogin.css'
 import { FaLockOpen } from "react-icons/fa6";
 import { useState } from 'react';
@@ -10,14 +10,12 @@ import { useNavigate } from "react-router-dom";
 import Cookies from 'js-cookie';
 import CryptoJS from 'crypto-js';
 import { secretKey } from '../../config/secData';
-import jwt from 'jsonwebtoken';
 
 
 
 export default function Login(){
     const navigate = useNavigate();
     const [data , setdata]=useState({}); 
-    // use context config
 
     //hash function
     const encryptText = (text) => {
@@ -26,7 +24,6 @@ export default function Login(){
         return encryptedText;
       };
     const SendMail = async()=>{
-        // getData()
         const response = await axios.post(SendEmail);
         if(response.status == 200){
             Swal.fire({
@@ -56,6 +53,7 @@ export default function Login(){
         if(response.data.message == "owner is login"){
             const encryptedText = encryptText(response.data.Authorization);
             Cookies.set('Authorization', encryptedText, { expires: 15 });
+            Cookies.set('ownerLogin', true , { expires: 15 });
             navigate('/owner/dashboard');
         }else{
             Swal.fire({

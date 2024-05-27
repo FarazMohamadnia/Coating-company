@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 // icon 
 import { IoIosColorPalette } from "react-icons/io";
-import { FaInstagram , FaFacebook , FaTiktok , FaTwitter,FaPhoneSquare ,FaLinkedin , FaYoutube , FaHome , FaMailBulk} from "react-icons/fa";
+import { FaInstagram , FaFacebook , FaTiktok , FaTwitter,FaPhoneSquare ,FaLinkedin , FaYoutube , FaHome , FaMailBulk , FaSearchLocation} from "react-icons/fa";
 import { IoIosPricetags } from "react-icons/io";
 import { VscFeedback } from "react-icons/vsc";
 import { MdOutlineProductionQuantityLimits } from "react-icons/md";
@@ -39,6 +39,9 @@ export default function Footer(){
                     <Link to={'nucoating@gmail.com'}><FaMailBulk />2-Email</Link>
                     <Link><FaPhoneSquare />1-Phone number</Link>
                     <Link><FaPhoneSquare />2-Phone number</Link>
+                </Col>
+                <Col sm={12}>
+                    <p className='ms-2'><FaSearchLocation />-Address : 7377 Washington Boulevard suite 105, Elkridge, Maryland 21075</p>
                 </Col>
             </div>
             <div className='Footer-description'>

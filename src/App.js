@@ -7,7 +7,6 @@ import Colors from './pages/color/colors.js';
 import Login from './pages/ownerLogin/ownerLogin.js';
 import Dashboard from './pages/Dashboard/dashboard.js';
 
-
 function App() {
   return(
     <BrowserRouter>
