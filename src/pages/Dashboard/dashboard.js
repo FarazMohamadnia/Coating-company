@@ -43,6 +43,7 @@ export default function Dashboard(){
     const [imgUrl , setimgUrl]=useState([]);
     const [seeStory , setseeStory]=useState([]);
     const [getStorys , setgetStorys]=useState([]);
+    const [disableBTN , setdisableBTN]=useState(false)
     const myStateCookieValue = Cookies.get('ownerLogin');
     const Auth = Cookies.get('Authorization');
     const navigate = useNavigate();
@@ -87,7 +88,7 @@ export default function Dashboard(){
     }
 
     const uploadImage2 = ()=>{
-        console.log('hhhhhh2')
+        
         const imgref = ref(imgDB , `nucoatingImg/${v4()}`);
         uploadBytes(imgref , PostStory.image2).then(val2 =>{
             getDownloadURL(val2.ref).then(url2 =>{
@@ -96,13 +97,13 @@ export default function Dashboard(){
                     photo
                 ])
                 saveInDatabase();
-                console.log('hhhhhh3kk')
+                setdisableBTN(false)
             })
         })
     }
     const SendStory =()=>{
+        setdisableBTN(true)
         const imgref = ref(imgDB , `nucoatingImg/${v4()}`);
-        console.log('ffffffff1')
         uploadBytes(imgref , PostStory.image1).then(val1 =>{
             getDownloadURL(val1.ref).then(url1 =>{
                 const photo = url1
@@ -116,7 +117,6 @@ export default function Dashboard(){
 
 
     const saveInDatabase = async()=>{
-        console.log('database 4444')
         const Token =DeHashFunction();
         const response =await axios.post(getStory , {
             image1: imgUrl[0].toString(),
@@ -128,7 +128,6 @@ export default function Dashboard(){
                 Authorization : Token
             }
         });
-        console.log(response)
         if(response.status === 201){
             Swal.fire({
                 title: "succefull",
@@ -227,7 +226,7 @@ export default function Dashboard(){
                             </Col>
                         </div>
                         <div className='text-center w-100 mt-3'>
-                            <Button onClick={SendStory} className='w-50 text-center' variant='contained'>
+                            <Button disabled={disableBTN} onClick={SendStory} className='w-50 text-center' variant='contained'>
                                 Send
                             </Button>
                         </div>

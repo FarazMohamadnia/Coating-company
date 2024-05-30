@@ -101,7 +101,7 @@ function Homepage(){
                 <Des/>
             </div>
             <div className='Pcolor2-style'>
-                <h1 data-aos="zoom-in" className='font-style fw-bold text-center text-light'>Powder coting Color</h1>
+                <h1 data-aos="zoom-in" className='font-style fw-bold text-center text-light'>Color Palette</h1>
                 <div className=''>
                     <div  className='pcolor2-body-styles'>
                         <span className='pcolor2-body-styles-span'><Link to={'/Color'}><FaArrowCircleLeft color='black' size={'2rem'}/></Link>

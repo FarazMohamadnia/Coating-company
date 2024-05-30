@@ -91,8 +91,8 @@ function ControlledTabs() {
         <div className='d-md-flex'>
           <Col md='7'>
             <div className='m-2'>
-              <h2 className='text-light'>Chesapeake Coating: Elevating Architectural Excellence with Two Decades of Unrivaled Powder Coating Mastery in the Mid-Atlantic</h2>
-              <p className='m-2'>For more than two decades, Chesapeake Coating has been a trusted provider of top-notch architectural powder coating and finishing services in the Mid-Atlantic region. Our commitment to quality is reflected in the durability, scratch resistance, and weather resistance that our coatings offer, ensuring that your architectural components maintain their integrity and appearance over the long term.</p>
+              <h2 className='text-light'>Nucoating : Elevating Architectural Excellence with Two Decades of Unrivaled Powder Coating Mastery in the Mid-Atlantic</h2>
+              <p className='m-2'>For more than two decades, Nucoat Coating has been a trusted provider of top-notch architectural powder coating and finishing services in the Mid-Atlantic region. Our commitment to quality is reflected in the durability, scratch resistance, and weather resistance that our coatings offer, ensuring that your architectural components maintain their integrity and appearance over the long term.</p>
               <p className='mb-2'>We take pride in offering a diverse selection of colors, glosses, finishes, and textures, providing you with a broad spectrum of options to meet your aesthetic preferences and project requirements. Whether your materials are steel, aluminum, or galvanized steel, our expertise in abrasive blasting and our meticulous five-stage pretreatment process are integral to achieving a lasting and high-quality finish.</p>
               <p>We specialize in powder coatings and fluoroploymer coatings and finishes for:</p>
               <ul>
@@ -108,7 +108,7 @@ function ControlledTabs() {
                 <li>Playground & Recreational Equipment</li>
                 <li>Outdoor Seating</li>
               </ul>
-              <p>At Chesapeake Coating, we are dedicated to delivering excellence in architectural powder coating, and our decades-long experience speaks to our commitment to quality and customer satisfaction. Trust us to provide the enduring, high-quality finish your architectural projects demand.</p>
+              <p>At Nucoat Coating, we are dedicated to delivering excellence in architectural powder coating, and our decades-long experience speaks to our commitment to quality and customer satisfaction. Trust us to provide the enduring, high-quality finish your architectural projects demand.</p>
             </div>
           </Col>
           <Col md='5'>

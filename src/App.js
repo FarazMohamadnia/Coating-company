@@ -6,10 +6,15 @@ import Feedback from './pages/feedback/feedback.js';
 import Colors from './pages/color/colors.js';
 import Login from './pages/ownerLogin/ownerLogin.js';
 import Dashboard from './pages/Dashboard/dashboard.js';
+import { Helmet } from 'react-helmet';
+import img from '../src/asset/aboutUs/nucoatingblackLogo.png'
 
 function App() {
   return(
     <BrowserRouter>
+      <Helmet>
+        <link rel="icon" type="image/x-icon" href={img}/>
+      </Helmet>
       <Routes>
         <Route path='/' element={<Homepage />}/>
         <Route path='/getQuote' element={<GetQuote />}/>

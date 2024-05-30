@@ -98,7 +98,7 @@ export default function Feedback(){
                 Comments & Feedback <VscCommentDiscussion size={'3rem'}/>
                </h1>
                <p className="text-light m-auto my-3 font-style fw-bold text-center">
-                In this section, you are free to express your comments and questions openly.
+                In this section, you are free to express your comments and questions freely.
                </p>
             </div>
             <div className="feedback-body">
@@ -120,7 +120,7 @@ export default function Feedback(){
                         <span onClick={openModal} className="exit-form-button"><BsFillXCircleFill color="white" size={'2.5rem'}/></span>
                         <div className="wh-100 vh-100 d-flex justify-content-center align-items-center">
                             <div className="form-section-modal-body">
-                                <h1 className="font-style fw-bold text-center">Register comments</h1>
+                                <h1 className="font-style fw-bold text-center">Leave a Review</h1>
                                 <p className="form-description">
                                     <br/>
                                     <IoIosWarning size={'18px'} color="yellow"/>-Please ensure the following points before submitting a comment:
@@ -139,14 +139,14 @@ export default function Feedback(){
                                         <Form.Control onChange={saveData} type="text" name="title" placeholder="Title" />
                                       </Form.Group>
                                       <Form.Group className="mb-3 text-start font-style fw-bold" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Label>Example textarea</Form.Label>
+                                        <Form.Label>Description</Form.Label>
                                         <Form.Control onChange={saveData} name="text" as="textarea" rows={3} />
                                       </Form.Group>
                                     </Form>
                                 </div>
                         
                                 <LoadingButton onClick={sendData} className="w-75 mt-5" loadingIndicator="Loading…" variant="contained" color="error">
-                                  Sent Comments
+                                  Submit
                                 </LoadingButton>
                             </div>
                         </div>

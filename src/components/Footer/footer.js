@@ -28,17 +28,17 @@ export default function Footer(){
                 <Col className='' sm={4} md={4}>
                     <p className='font-style fw-bold'>Routes</p>
                     <Link to={'/'}><FaHome />-Home</Link>
-                    <Link to={'/getQuote'}><IoIosPricetags />-Get a Quote</Link>
-                    <Link to={'/feedback'}><VscFeedback />-Feedback</Link>
+                    <Link to={'/getQuote'}><IoIosPricetags />-Request a Quote</Link>
+                    <Link to={'/feedback'}><VscFeedback />-Review</Link>
                     <Link to={'/Color'}><IoIosColorPalette />-Colors</Link>
                     <Link to={'/'}><MdOutlineProductionQuantityLimits />-Product </Link>
                 </Col>
                 <Col className='' sm={4} md={3}>
                 <p className='font-style fw-bold'>Contact us</p>
-                    <Link to={'nucoating@gmail.com'}><FaMailBulk />1-Email</Link>
-                    <Link to={'nucoating@gmail.com'}><FaMailBulk />2-Email</Link>
-                    <Link><FaPhoneSquare />1-Phone number</Link>
-                    <Link><FaPhoneSquare />2-Phone number</Link>
+                    <Link ><FaMailBulk />1-Contactus@nucoating.com</Link>
+                    <Link ><FaMailBulk />2-Quoterequest@nucoating.com</Link>
+                    <Link ><FaPhoneSquare />1-Phone number</Link>
+                    <Link ><FaPhoneSquare />2-Phone number</Link>
                 </Col>
                 <Col sm={12}>
                     <p className='ms-2'><FaSearchLocation />-Address : 7377 Washington Boulevard suite 105, Elkridge, Maryland 21075</p>

@@ -17,8 +17,7 @@ import 'swiper/css/navigation';
 import { EffectFlip, Pagination, Navigation } from 'swiper/modules';
 
 // import images
-import img from '../../asset/aboutUs/IMAGE 2024-05-20 23:25:01.jpg'
-import img2 from '../../asset/aboutUs/IMAGE 2024-05-20 23:25:07.jpg'
+import img from '../../asset/aboutUs/nucoatingblackLogo.png'
 // aos animation
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -48,13 +47,13 @@ export default function Header(){
                         <TypeAnimation
                             preRenderFirstString={true}
                             sequence={[
-                              'We produce food for Mice',
+                              'Expect from us your wildest designs',
                               2000,
                               () => setTextColor('white'),
-                              'We produce food for Hamsters',
+                              'Expect from us the best ',
                               2000,
                               () => setTextColor('white'),
-                              'We produce food for Chinchil',
+                              'Expect from us what you desire ',
                               2000,
                               () => setTextColor('white'),
                             ]}
@@ -63,7 +62,10 @@ export default function Header(){
                         />
                     </div>
                     <div className='d-md-flex d-md-block w-100 justify-content-between'>
-                        <p className='description' data-aos="fade-right">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        <p className='description' data-aos="fade-right">
+                        The nucoating team provides the best color services in the fastest time and at the best price in the state of Maryland, America. Our team with a brilliant history in the coating area in all branches (automotive - building materials, etc.) is ready to serve people who want the highest quality and we try to provide the best as soon as possible. Provide services.  
+                        Expect the best from the best
+                        To receive services from us, be sure to go to the get a quote section and enter your information so that we can contact you as soon as possible.
                           <Link to={'/getQuote'}><Button className='mt-3 d-block w-100'>Request a Quote</Button></Link>
                         </p>
                         
@@ -81,13 +83,10 @@ export default function Header(){
                 >
                   <SwiperSlide>
                     <img src={img}/>
-                    <h3 className='font-style fw-bold'>shayan</h3>
-                    <p> kefhrjkefjf akfkjrbf sefkjrf</p>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={img2}/>
-                    <h3 className='font-style fw-bold'>Oveis</h3>
-                    <p> kefhrjkefjf akfkjrbf sefkjrf kdfhkshfkdf kjhdfkjdhfkdfkj dfdsjfhksdfhkdsf dfhdksfhskf</p>
+                    <h3 className='font-style fw-bold'>Ownership</h3>
+                    <p>
+                      Here at nucoating, which is managed by the partnership of Oveis and Shayan, they have  years of experience in this work and specialize in providing the best. Order and punctuality and customer satisfaction are our main demands. Our effort and goal as the manager of the powder coating team is to make every person who received services from us completely satisfied and to give them a full guarantee for providing all kinds of services. We established the Powdercoatin team in 2024 to provide services to people who want to receive the best services from the most specialized people. You can use email and contact number to contact our team.
+                    </p>
                   </SwiperSlide>
                 </Swiper>
                 </Col>

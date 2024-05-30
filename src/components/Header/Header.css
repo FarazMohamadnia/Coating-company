@@ -30,8 +30,8 @@
     border: 1px solid black;
     border-radius: 15px;
     text-align: center;
-    padding-left: 15%;
-    padding-right: 15%;
+    padding: 15px;
+    overflow-y: scroll;
 }
 .swiper-personaliti-sectiopn .swiper-slide img{
     width: 120px;
