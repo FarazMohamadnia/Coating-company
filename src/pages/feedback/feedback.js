@@ -30,6 +30,7 @@ export default function Feedback(){
     const [Data , setData]=useState([]);
     const [senDataTimeStamp , setsenDataTimeStamp] = useState(true);
     const [loading , setloading] = useState(true);
+    const [activeBTN , setactiveBTN] = useState(false)
 
     const openModal = ()=>{
         if(modal){
@@ -56,10 +57,11 @@ export default function Feedback(){
 
     const sendData =async ()=>{ 
         if(senDataTimeStamp){
-            
+            setactiveBTN(true)
             let response = await axios.post(getComments , Data);
-            
+            setactiveBTN(false)
             if(response.data.message === 'ok'){
+                setactiveBTN(true)
                 Swal.fire({
                     title: "Send",
                     text: "Comment sent successfully.",
@@ -70,7 +72,7 @@ export default function Feedback(){
                     setsenDataTimeStamp(true);
                 }, 5 * 60 * 1000);
             }else if(response.data.message === 'error'){
-                
+                setactiveBTN(false)
                 Swal.fire({
                     title: "Error",
                     text: "Please try again !",
@@ -145,7 +147,7 @@ export default function Feedback(){
                                     </Form>
                                 </div>
                         
-                                <LoadingButton onClick={sendData} className="w-75 mt-5" loadingIndicator="Loading…" variant="contained" color="error">
+                                <LoadingButton onClick={sendData} disabled={activeBTN} className="w-75 mt-5" loadingIndicator="Loading…" variant="contained" color="error">
                                   Submit
                                 </LoadingButton>
                             </div>

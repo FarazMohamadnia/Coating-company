@@ -37,8 +37,7 @@ export default function Footer(){
                 <p className='font-style fw-bold'>Contact us</p>
                     <Link ><FaMailBulk />1-Contactus@nucoating.com</Link>
                     <Link ><FaMailBulk />2-Quoterequest@nucoating.com</Link>
-                    <Link ><FaPhoneSquare />1-Phone number</Link>
-                    <Link ><FaPhoneSquare />2-Phone number</Link>
+                    <Link ><FaPhoneSquare />1-Phone number: 4435376383</Link>
                 </Col>
                 <Col sm={12}>
                     <p className='ms-2'><FaSearchLocation />-Address : 7377 Washington Boulevard suite 105, Elkridge, Maryland 21075</p>

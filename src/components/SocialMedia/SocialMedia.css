@@ -18,6 +18,11 @@
     font-size: 11px;
 }
 
+.SocialMedia-body a{
+  text-decoration: none;
+  color: white;
+}
+
 @keyframes AnimateBG {
     0% {
       background-position: 0% 50%;

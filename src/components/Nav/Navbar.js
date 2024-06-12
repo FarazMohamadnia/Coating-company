@@ -17,9 +17,17 @@ import { Link } from 'react-router-dom';
 // import logo image
 import img from '../../asset/Logo/nucoatingLogo.jpg'
 import { NavDropdown, Offcanvas } from 'react-bootstrap';
+import Swal from 'sweetalert2';
 
 
 function NavScrollExample() {
+  const ProductHandller = ()=>{
+    Swal.fire({
+      icon:'warning',
+      title:'Coming soon ...',
+      text:'This section will be added to the site soon'
+    })
+  }
   return (
     <Navbar  expand="lg" className="bg-body-nav bg-body-tertiary">
       <Container fluid>
@@ -47,7 +55,7 @@ function NavScrollExample() {
             <Link className='text-light text-decoration-none' to={'/feedback'}>
               Review <FaRegCommentDots />
             </Link>
-            <Link className='text-light text-decoration-none' >
+            <Link onClick={ProductHandller} className='text-light text-decoration-none' >
               Product <MdOutlineProductionQuantityLimits />
             </Link>
             <NavDropdown title="Contact Us" id="basic-nav-dropdown">
@@ -58,7 +66,7 @@ function NavScrollExample() {
                 Quoterequest@nucoating.com
               </NavDropdown.Item>
               <NavDropdown.Item>
-                Phone number
+                Phone number : 4435376383
               </NavDropdown.Item>
             </NavDropdown>
           </Nav>
